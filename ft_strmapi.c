@@ -12,29 +12,29 @@
 
 #include "libft.h"
 
-
-char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	to_upper(char c)
 {
-	int	index;
-	char *new_str;
-	
+	if (c >= 'a' && c <= 'z')
+		c = c - 32;
+	return (c);
+}
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	unsigned int	index;
+	char			*new_str;
+
 	index = 0;
-	new_str = (char *)malloc(ft_strlen(s)*sizeof(char));
+	new_str = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!new_str)
-		return NULL;
+		return (NULL);
 	while (s[index])
 	{
 		new_str[index] = f(index, s[index]);
 		index++;
 	}
+	new_str[index] = '\0';
 	return (new_str);
-}
-
-char	to_upper(char c)
-{
-	if (c >='a' && c<='z')
-		c= c - 32;
-	return c;
 }
 
 // int main(int argc, char **argv)
@@ -49,7 +49,6 @@ char	to_upper(char c)
 // 		index++;
 // 	}
 // }
-	
 // int main()
 // {
 // 	strcpy(str, "LoReM iPsUm");

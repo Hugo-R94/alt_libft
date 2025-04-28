@@ -15,41 +15,40 @@
 #include <string.h>
 #include "libft.h"
 
-int		ft_strlen(const char *s)
+int	ft_strlen(const char *s)
 {
-    int index;
-    index = 0;
-    while (s[index])
-        index++;
-    return(index);
+	int	index;
+
+	index = 0;
+	while (s[index])
+		index++;
+	return (index);
 }
 
 char	*ft_substr(char const *s, int start, size_t len)
 {
-	int index2;
+	int		index2;
 	char	*str;
 
 	index2 = 0;
 	if (start >= ft_strlen(s) || len == 0)
-		{
-			str = malloc(1);
-			str[0] = '\0';
-			return(str);
-		}
-	if(len < 0 )
-	 	return(NULL);
+	{
+		str = malloc(1);
+		str[0] = '\0';
+		return (str);
+	}
+	if ((int)len < 0)
+		return (NULL);
 	if (start < 0)
 		start = ft_strlen(s) + start;
-
 	str = (char *)malloc(len);
 	if (!str)
-		return(NULL);
+		return (NULL);
 	while ((size_t)index2 < len)
 		str[index2++] = s[start++];
 	str[index2] = '\0';
-	return (str);		
+	return (str);
 }
-
 
 // int	main(void)
 // {

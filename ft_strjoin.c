@@ -34,9 +34,7 @@ char	*ft_strcat(char *dest, const char *src)
 	i = 0;
 	e = 0;
 	while (dest[i] != '\0')
-	{
 		i++;
-	}
 	while (src[e] != '\0')
 	{
 		dest[i] = src[e];
@@ -47,25 +45,22 @@ char	*ft_strcat(char *dest, const char *src)
 	return (dest);
 }
 
-char    *ft_strjoin(char const *s1,char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-    char    *str_join;
+	char	*str_join;
 
-	str_join = malloc(ft_strlen(s1) + ft_strlen(s2));
-	if(!str_join)
+	str_join = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!str_join)
 		return (NULL);
-    str_join[0] = '\0';
-	ft_strcat(str_join,s1);
-	ft_strcat(str_join,s2);
-    return(str_join);
+	str_join[0] = '\0';
+	ft_strcat(str_join, s1);
+	ft_strcat(str_join, s2);
+	return (str_join);
 }
 
 // int	main(void)
 // {
-
-
 //     char *str1 = "lorem ipsum";
-//     char *str2 = "\0dolor sit amet";
-
+//     char *str2 = "dolor sit amet";
 // 	printf("%s", ft_strjoin(str1,str2));
 // }

@@ -14,19 +14,18 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    while (*(char *)s1 == *(char *)s2 && n > 0 )
-        {
-            s1 = (char *)s1 + 1;
-            s2 = (char *)s2 + 1;
-            n--;
-        }
+	while (*(char *)s1 == *(char *)s2 && n > 0)
+	{
+		s1 = (char *)s1 + 1;
+		s2 = (char *)s2 + 1;
+		n--;
+	}
 	if (n == 0)
 		return (0);
-    return (*(unsigned char *)s1 - *(unsigned char *)s2);
+	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }
-
 
 // int main() {
 //     char str1[] = "Hello, world!";

@@ -1,3 +1,15 @@
+/******************************************************************************/
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hugz <hugz@student.42.fr>                  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/28 23:03:18 by hugz              #+#    #+#             */
+/*   Updated: 2025/04/28 23:03:31 by hugz             ###   ########.fr       */
+/*                                                                            */
+/******************************************************************************/
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -6,27 +18,27 @@
 
 typedef struct s_list
 {
-    void *content;
-    struct s_list *next;
-}   t_list;
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 int		ft_atoi(const char *str);
-void    *ft_bzero(char *s, int size);
+void	ft_bzero(char *s, int size);
 void	*ft_calloc(size_t nmemb, size_t size);
 int		ft_isalnum(char c);
 char	ft_isalpha(int c);
-int	    ft_isprint(char c);
-int	    ft_isascii(char c);
+int		ft_isprint(char c);
+int		ft_isascii(char c);
 int		ft_isdigit(char c);
 char	*ft_itoa(int n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *dest, const void *src, int size);
 void	*ft_memmove(void *dest, const void *src, int size);
-void    *ft_memset(char *s, int c, int size);
+void	*ft_memset(char *s, int c, int size);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
-void    ft_putnbr_fd(int nb, int fd);
+void	ft_putnbr_fd(int nb, int fd);
 void	ft_putstr_fd(char *s, int fd);
 char	**ft_split(char *str, char c);
 char	*ft_strdup(const char *s1);
@@ -43,6 +55,6 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, int start, size_t len);
 int		ft_tolower(int c);
-int     ft_toupper(int i);
+int		ft_toupper(int i);
 
 #endif

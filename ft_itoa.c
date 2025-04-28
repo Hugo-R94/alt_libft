@@ -14,34 +14,37 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int nb_digits(int n)
+int	nb_digits(int n)
 {
-    int digits;
-	long int nb;
+	int			digits;
+	long int	nb;
 
 	nb = n;
-    digits = 1;
-    if (n < 0)
-    {
-        digits++;
-        nb = -nb;
-    }
+	digits = 1;
+	if (n < 0)
+	{
+		digits++;
+		nb = -nb;
+	}
 	else
-		nb  = n;	
-    while (nb >= 10)
-    {
-        
-        nb = nb /10;
+		nb = n;
+	while (nb >= 10)
+	{
+		nb = nb / 10;
 		digits++;
 	}
-    return(digits);
+	return (digits);
 }
 
 char	*ft_itoa(int n)
 {
-	int		len = nb_digits(n);
-	char	*str = malloc(len + 1);
-	long	nb = n;
+	int		len;
+	char	*str;
+	long	nb;
+
+	len = nb_digits(n);
+	str = malloc(len + 1);
+	nb = n;
 	if (!str)
 		return (NULL);
 	str[len--] = '\0';
