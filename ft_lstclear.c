@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/28 10:35:56 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/29 10:15:02 by hrouchy          ###   ########.fr       */
+/*   Created: 2025/04/28 10:32:56 by hrouchy           #+#    #+#             */
+/*   Updated: 2025/04/29 14:55:57 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	size_t	c;
-	size_t	d;
-
-	if (dstsize <= (size_t)ft_strlen(dst))
-		return (dstsize + ft_strlen(src));
-	c = ft_strlen(dst);
-	d = 0;
-	while (src[d] != '\0' && c + 1 < dstsize)
+	t_list *tmp;
+	if (!*lst)
+		return ;
+	while (*lst)
 	{
-		dst[c] = src[d];
-		c++;
-		d++;
+		tmp = (*lst)->next;
+		ft_lstdelone(*lst,del);
+		*lst = tmp;
 	}
-	dst[c] = '\0';
-	return (ft_strlen(dst) + ft_strlen(&src[d]));
+	*lst = 0;
 }

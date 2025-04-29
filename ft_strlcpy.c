@@ -6,7 +6,7 @@
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:36:04 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/28 10:36:05 by hrouchy          ###   ########.fr       */
+/*   Updated: 2025/04/29 10:14:50 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t srcsize;
-	size_t i;
+	size_t	srcsize;
+	size_t	i;
 
 	if (!dst || !src)
 		return (0);

@@ -6,7 +6,7 @@
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:35:39 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/28 17:36:46 by hrouchy          ###   ########.fr       */
+/*   Updated: 2025/04/29 16:19:40 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strdup(const char *source)
 
 	size_source = ft_strlen(source);
 	i = 0;
-	str_dup = (char *)malloc(size_source * sizeof(char));
+	str_dup = (char *)malloc((size_source * sizeof(char))+1);
 	if (!str_dup)
 		return (NULL);
 	while (i <= size_source)
@@ -57,4 +57,23 @@ char	*ft_strdup(const char *source)
 // 		printf("%s",str_dup);
 // 	if (str_dup == str)
 // 		printf("\nstr_dup's adress == str's adress");	
+// }
+
+// int	main(void)
+// {
+// 	int		i;
+// 	char	*src;
+// 	char	*dup;
+
+// 	i = 0;
+// 	src = "sans que ni tete mais qui mets quand meme bien";
+// 	dup = ft_strdup(src);
+// 	while (dup[i])
+// 	{
+// 		printf("%c", dup[i]);
+// 		i++;
+// 	}
+// 	free(dup);
+// 	dup = 0;
+// 	return (0);
 // }

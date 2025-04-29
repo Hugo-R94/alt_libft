@@ -6,7 +6,7 @@
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:37:07 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/28 17:47:12 by hrouchy          ###   ########.fr       */
+/*   Updated: 2025/04/29 16:12:54 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,53 +15,45 @@
 #include <string.h>
 #include "libft.h"
 
-int	ft_strlen(const char *s)
-{
-	int	index;
+// int	ft_strlen(const char *s)
+// {
+// 	int	index;
 
-	index = 0;
-	while (s[index])
-		index++;
-	return (index);
-}
+// 	index = 0;
+// 	while (s[index])
+// 		index++;
+// 	return (index);
+// }
 
 char	*ft_substr(char const *s, int start, size_t len)
 {
-	int		index2;
+	size_t	i = 0;
+	size_t	s_len;
 	char	*str;
 
-	index2 = 0;
-	if (start >= ft_strlen(s) || len == 0)
-	{
-		str = malloc(1);
-		str[0] = '\0';
-		return (str);
-	}
-	if ((int)len < 0)
+	if (!s)
 		return (NULL);
+	if (len == 0)
+		return("");
+	s_len = ft_strlen(s);
+
 	if (start < 0)
-		start = ft_strlen(s) + start;
-	str = (char *)malloc(len);
+		start = s_len + start;
+	if (start >= (int)s_len)
+		return ("");
+	if ((size_t)start + len > s_len)
+		len = s_len - start;
+	str = (char *)malloc(len + 1);
 	if (!str)
 		return (NULL);
-	while ((size_t)index2 < len)
-		str[index2++] = s[start++];
-	str[index2] = '\0';
+	while (i < len && s[start + i])
+	{
+		str[i] = s[start + i];
+		i++;
+	}
+	str[i] = '\0';
 	return (str);
 }
-
-// int	main(void)
-// {
-// 	test_substr("Hello World", 0, 5);          // "Hello"
-// 	test_substr("Hello World", 6, 5);          // "80World"
-// 	test_substr("Hello World", 6, 50);         // "World" (limite > fin)
-// 	test_substr("Hello World", 11, 5);         // "" (start == len de la chaîne)
-// 	test_substr("Hello World", 15, 3);         // "" (start > len de la chaîne)
-// 	test_substr("", 0, 5);                     // "" (chaîne vide)
-// 	test_substr("Hello", 0, 0);                // "" (longueur 0)
-
-// 	return 0;
-// }
 
 // int main()
 // {
@@ -75,4 +67,20 @@ char	*ft_substr(char const *s, int start, size_t len)
 // 		printf("%s",strsub);
 // 	if (str == strsub)
 // 		printf("\nA new string was not returned");
+// }
+//
+//
+// int	main(void)
+// {
+// 	char const	*s = "lorem ipsum dolor sit amet";
+// 	unsigned int	start = 7;
+// 	size_t	len = 10;
+//
+// 	printf("start index: %d\nsubstring length: %zu\n", start, len );
+// 	printf("string: %s\nft_substr: %s\n", s, ft_substr(s, start, len));
+// }
+
+// int main()
+// {
+// 	printf("%s",ft_substr("hello", 2, 10));
 // }

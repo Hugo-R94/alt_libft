@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/28 10:35:56 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/29 10:15:02 by hrouchy          ###   ########.fr       */
+/*   Created: 2025/04/28 10:32:56 by hrouchy           #+#    #+#             */
+/*   Updated: 2025/04/29 14:19:38 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	size_t	c;
-	size_t	d;
-
-	if (dstsize <= (size_t)ft_strlen(dst))
-		return (dstsize + ft_strlen(src));
-	c = ft_strlen(dst);
-	d = 0;
-	while (src[d] != '\0' && c + 1 < dstsize)
+	if (!del || !lst)
+		return ;
+	else
 	{
-		dst[c] = src[d];
-		c++;
-		d++;
+		del(lst->content);
+		free(lst);
 	}
-	dst[c] = '\0';
-	return (ft_strlen(dst) + ft_strlen(&src[d]));
 }
+

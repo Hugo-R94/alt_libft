@@ -6,7 +6,7 @@
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:34:54 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/28 17:07:17 by hrouchy          ###   ########.fr       */
+/*   Updated: 2025/04/29 10:11:15 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_isascii(char c)
 {
-    if (c >= 0 && c <= 127)
-        return (1);
-    else   
-        return (0);
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+		return (0);
 }

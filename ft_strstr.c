@@ -6,7 +6,7 @@
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:36:46 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/28 10:36:46 by hrouchy          ###   ########.fr       */
+/*   Updated: 2025/04/29 10:13:39 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 #include <stdio.h>
 #include <string.h>
 #include "libft.h"
-char	*ft_strstr(char *src,char *str)
+
+char	*ft_strstr(char *src, char *str)
 {
-	int index_src;
-	int index_to_find;
+	int	index_src;
+	int	index_to_find;
 
 	index_src = 0;
 	if (str[0] == '\0')
@@ -27,17 +28,17 @@ char	*ft_strstr(char *src,char *str)
 		index_to_find = 0;
 		if (src[index_src] == str[index_to_find])
 		{
-			while (str[index_to_find] && src[index_src + index_to_find] == str[index_to_find])
+			while (str[index_to_find]
+				&& src[index_src + index_to_find] == str[index_to_find])
 			{
-				if (str[index_to_find+1]=='\0')
+				if (str[index_to_find + 1] == '\0')
 					return (&src[index_src]);
 				index_to_find++;
 			}
-			
 		}
 		index_src++;
 	}
-	return(NULL);
+	return (NULL);
 }
 
 // int main()

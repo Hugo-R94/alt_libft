@@ -6,7 +6,7 @@
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/25 12:06:20 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/28 10:35:27 by hrouchy          ###   ########.fr       */
+/*   Updated: 2025/04/29 10:17:36 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,5 +92,4 @@ char	**ft_split(char *str, char c)
 // 		printf("%s\n",splitresult[index]);
 // 		index++;
 // 	}
-	
 // }

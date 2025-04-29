@@ -6,28 +6,28 @@
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:33:34 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/28 10:33:35 by hrouchy          ###   ########.fr       */
+/*   Updated: 2025/04/29 10:29:52 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_memcpy(void *dest,const void *src,int size)
+void	*ft_memcpy(void *dest, const void *src, int size)
 {
-    int index;
-    unsigned char *source = (unsigned char *)src;
-    unsigned char *destination = (unsigned char *)dest;
-    index = 0;
-    while (index<size)
-    {
-        destination[index] = source[index];
-        index++;
-    }
-    return destination;
-    
+	int				index;
+	unsigned char	*source;
+	unsigned char	*destination;
+
+	source = (unsigned char *)src;
+	destination = (unsigned char *)dest;
+	index = 0;
+	while (index < size)
+	{
+		destination[index] = source[index];
+		index++;
+	}
+	return (destination);
 }
-
-
 
 // int main() {
 //     char src[20] = "memmove test";
