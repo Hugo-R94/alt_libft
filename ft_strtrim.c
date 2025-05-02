@@ -6,12 +6,10 @@
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:37:00 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/28 10:37:01 by hrouchy          ###   ########.fr       */
+/*   Updated: 2025/05/02 12:03:57 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_isinset(char c, const char *set)

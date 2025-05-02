@@ -6,13 +6,11 @@
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:34:21 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/29 16:25:45 by hrouchy          ###   ########.fr       */
+/*   Updated: 2025/05/02 15:19:54 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
 int	ft_strncmp(const char *s1, const char *s2, int size)
 {
@@ -23,7 +21,7 @@ int	ft_strncmp(const char *s1, const char *s2, int size)
 		return (0);
 	if (size < 0)
 		return (-1);
-	while (s1[index] == s2[index] && index < size)
+	while (s1[index] == s2[index] && index < size && s1[index])
 		index++;
 	if (index == size)
 		return (0);

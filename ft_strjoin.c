@@ -6,25 +6,11 @@
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 16:54:12 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/28 17:49:21 by hrouchy          ###   ########.fr       */
+/*   Updated: 2025/05/02 15:20:55 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
-
-int	ft_strlen(const char *str)
-{
-	int	i;	
-
-	i = 0;
-	while (str[i])
-	{
-		i++;
-	}
-	return (i);
-}
 
 char	*ft_strcat(char *dest, const char *src)
 {

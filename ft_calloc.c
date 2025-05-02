@@ -6,7 +6,7 @@
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:34:33 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/29 10:10:44 by hrouchy          ###   ########.fr       */
+/*   Updated: 2025/05/02 16:05:37 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	char	*str;
 
-	if (nmemb == 0 || size == 0)
-		return (NULL);
-	str = (void *)malloc(nmemb * size);
+	str = malloc(nmemb * size);
 	if (!str)
 		return (NULL);
 	ft_bzero(str, (nmemb * size));

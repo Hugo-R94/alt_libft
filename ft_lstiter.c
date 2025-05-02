@@ -6,7 +6,7 @@
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:32:56 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/29 15:26:55 by hrouchy          ###   ########.fr       */
+/*   Updated: 2025/05/02 11:28:36 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,11 @@
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*tmp;
+
 	tmp = lst;
 	if (tmp == NULL)
 		return ;
-	while (tmp!=NULL)
+	while (tmp != NULL)
 	{
 		f(tmp->content);
 		tmp = tmp->next;

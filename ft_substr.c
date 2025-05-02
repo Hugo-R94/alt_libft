@@ -5,48 +5,31 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/28 10:37:07 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/29 16:12:54 by hrouchy          ###   ########.fr       */
+/*   Created: 2025/05/02 11:33:47 by hrouchy           #+#    #+#             */
+/*   Updated: 2025/05/02 12:04:01 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "libft.h"
 
-// int	ft_strlen(const char *s)
-// {
-// 	int	index;
-
-// 	index = 0;
-// 	while (s[index])
-// 		index++;
-// 	return (index);
-// }
-
-char	*ft_substr(char const *s, int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	i = 0;
+	size_t	i;
 	size_t	s_len;
 	char	*str;
 
+	i = 0;
 	if (!s)
 		return (NULL);
-	if (len == 0)
-		return("");
 	s_len = ft_strlen(s);
-
-	if (start < 0)
-		start = s_len + start;
-	if (start >= (int)s_len)
-		return ("");
-	if ((size_t)start + len > s_len)
+	if (start >= s_len)
+		return (ft_strdup(""));
+	if (start + len > s_len)
 		len = s_len - start;
 	str = (char *)malloc(len + 1);
 	if (!str)
 		return (NULL);
-	while (i < len && s[start + i])
+	while (i < len)
 	{
 		str[i] = s[start + i];
 		i++;

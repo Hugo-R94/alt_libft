@@ -6,13 +6,10 @@
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:36:46 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/29 10:13:39 by hrouchy          ###   ########.fr       */
+/*   Updated: 2025/05/02 12:03:53 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
 char	*ft_strstr(char *src, char *str)

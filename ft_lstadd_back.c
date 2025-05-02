@@ -6,7 +6,7 @@
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:32:56 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/29 12:18:47 by hrouchy          ###   ########.fr       */
+/*   Updated: 2025/05/02 11:25:50 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,12 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
+	t_list	*tmp;
+
 	if (*lst == NULL)
 		*lst = new;
 	else
 	{
-		t_list	*tmp;
 		tmp = *lst;
 		while (tmp->next != NULL)
 		{

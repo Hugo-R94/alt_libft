@@ -6,7 +6,7 @@
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:33:34 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/29 10:29:52 by hrouchy          ###   ########.fr       */
+/*   Updated: 2025/05/02 16:05:49 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	*ft_memcpy(void *dest, const void *src, int size)
 
 // int main() {
 //     char src[20] = "memmove test";
-//     char dest1[20] = "copier ici";
+//     char dest1[20] = NULL;
 //     char dest2[20] = "copier ici";
 
 //     int size = 12;

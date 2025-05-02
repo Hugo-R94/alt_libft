@@ -6,23 +6,22 @@
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:35:10 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/29 10:21:53 by hrouchy          ###   ########.fr       */
+/*   Updated: 2025/05/02 15:17:55 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
-void	*ft_memset(char *s, int c, int size)
+void	*ft_memset(void *s, int c, int size)
 {
 	int	index;
-
+	unsigned char *tmp;
+	
 	index = 0;
+	tmp = (unsigned char *)s;
 	while (index < size)
-		s[index++] = c;
-	return (s);
+		tmp[index++] = c;
+	return (tmp);
 }
 
 // int main() {

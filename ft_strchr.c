@@ -5,14 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/28 10:35:32 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/29 10:17:19 by hrouchy          ###   ########.fr       */
+/*   Created: 2025/05/02 11:31:14 by hrouchy           #+#    #+#             */
+/*   Updated: 2025/05/02 11:31:59 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -23,11 +21,11 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)&s[0]);
 	while (s[index])
 	{
-		if (s[index] == c)
+		if ((unsigned char)s[index] == (unsigned char)c)
 			return ((char *)&s[index]);
 		index++;
 	}
-	if (s[index] == c)
+	if ((unsigned char)s[index] == (unsigned char)c)
 		return ((char *)&s[index]);
 	return (NULL);
 }

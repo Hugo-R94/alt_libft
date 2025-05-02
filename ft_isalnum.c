@@ -6,7 +6,7 @@
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:34:39 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/28 10:34:40 by hrouchy          ###   ########.fr       */
+/*   Updated: 2025/05/02 15:36:42 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 int	ft_isalnum(char c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')
-		|| (c >= '0' && c <= '9'))
+	// if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')
+	// 	|| (c >= '0' && c <= '9'))
+	// 	return (1);
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
 	else
 		return (0);

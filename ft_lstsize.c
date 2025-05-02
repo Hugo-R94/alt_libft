@@ -6,7 +6,7 @@
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 10:32:56 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/29 11:45:00 by hrouchy          ###   ########.fr       */
+/*   Updated: 2025/05/02 11:30:25 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int	i;
+	int		i;
 	t_list	*tmp;
-	
+
 	i = 0;
 	tmp = lst;
 	while (tmp)

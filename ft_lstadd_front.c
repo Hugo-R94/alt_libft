@@ -6,20 +6,11 @@
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 12:35:29 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/29 12:14:07 by hrouchy          ###   ########.fr       */
+/*   Updated: 2025/05/02 12:05:00 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}	t_list;
+#include "libft.h"
 
 // void	print_list(t_list *lst)
 // {

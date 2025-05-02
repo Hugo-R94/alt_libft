@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hrouchy <hrouchy@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/28 10:34:21 by hrouchy           #+#    #+#             */
-/*   Updated: 2025/04/29 11:32:01 by hrouchy          ###   ########.fr       */
+/*   Created: 2025/05/02 11:26:03 by hrouchy           #+#    #+#             */
+/*   Updated: 2025/05/02 16:09:54 by hrouchy          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *dest, const void *src, int size);
 void	*ft_memmove(void *dest, const void *src, int size);
-void	*ft_memset(char *s, int c, int size);
+void	*ft_memset(void *s, int c, int size);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int nb, int fd);
@@ -53,7 +53,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strtrim(char const *s1, char const *set);
-char	*ft_substr(char const *s, int start, size_t len);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int i);
 void	ft_lstadd_front(t_list **lst, t_list *new_elem);
